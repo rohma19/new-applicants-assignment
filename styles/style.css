@@ -11,7 +11,122 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #000;
+    color: #b11b1b;
+    font-size: 18px; /* Common font size for both screen sizes */
+}
+
+.container {
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.display {
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    outline: none;
+    text-align: right;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    font-size: 24px;
+    padding: 10px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button:active {
+    background-color: #333;
+}
+
+/* You should define the styles for the "calculator" class as needed. */
+.calculator {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
     color: #fff;
 }
 
-/* Add your css  */
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media (max-width: 768px) {
+    /* Add your styles for smaller screens here */
+    .container {
+        width: 100%;
+    }
+
+    .display {
+        font-size: 18px;
+    }
+
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+
+/* Media query for screens larger than 768px (e.g., tablets and desktops) */
+@media (min-width: 769px) {
+    /* Add your styles for larger screens here */
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+/* Additional styles from the second CSS section */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.display {
+    color: rgb(0, 255, 149);
+}
+
+button:hover {
+    background-color: #9c1515;
+}
+
+button:active {
+    background-color: #bbb;
+}
+
+button:empty {
+    visibility: hidden;
+}
